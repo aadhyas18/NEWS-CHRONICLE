@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News - News Portal</title>
+    <link rel="stylesheet" href="script.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">DAILY<span>NEWS</span></div>
+        <div class="header-info">Your World. Your News.</div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <button class="menu-toggle" id="menuToggle">☰ Menu</button>
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#latest">Latest News</a>
+            <a href="#world" data-category="World">World</a>
+            <a href="#technology" data-category="Technology">Technology</a>
+            <a href="#sports" data-category="Sports">Sports</a>
+            <a href="#business" data-category="Business">Business</a>
+            <a href="#entertainment" data-category="Entertainment">Entertainment</a>
+        </div>
+
+        <form class="search-box" id="searchForm">
+            <input type="search" id="searchInput"
+                   placeholder="Search news..." aria-label="Search news">
+            <button type="submit">Search</button>
+        </form>
+    </nav>
+
+    <!-- Breaking News -->
+    <div class="breaking-news">
+        <span class="breaking-label">BREAKING</span>
+        <div class="ticker">
+            <span id="tickerText">
+                Welcome to Daily News — Your source for the latest headlines!
+            </span>
+        </div>
+    </div>
+
+    <main class="container" id="home">
+
+        <!-- Featured Headline -->
+        <section class="featured-section">
+            <h2 class="section-title">Top Headlines</h2>
+
+            <article class="featured-article">
+                <img
+                    src="report.jpeg"
+                    alt="Newspapers representing current news">
+
+                <div class="featured-content">
+                    <span class="category-tag">TOP STORY</span>
+                    <h1>Stay Informed With the Stories
+                        Shaping Our World</h1>
+                    <p>
+                        Explore the latest developments in technology,
+                        business, sports, world affairs, and entertainment
+                        with Daily News.
+                    </p>
+                    <a href="#latest" class="read-more">Explore Latest News →</a>
+                </div>
+            </article>
+        </section>
+
+        <!-- Main News and Trending Stories -->
+        <div class="content-layout">
+
+            <section class="latest-section" id="latest">
+                <div class="section-heading">
+                    <h2 class="section-title">Latest News</h2>
+                    <button id="showAll" class="clear-filter">
+                        Show All
+                    </button>
+                </div>
+
+                <p id="resultMessage" class="result-message">
+                    Latest stories from different categories
+                </p>
+
+                <div class="news-grid" id="newsGrid">
+
+                    <!-- JavaScript inserts article cards here -->
+
+                </div>
+            </section>
+
+            <!-- Trending Sidebar -->
+            <aside class="trending-section">
+                <h2 class="section-title">Trending Stories</h2>
+
+                <ol class="trending-list" id="trendingList">
+                    <!-- JavaScript inserts trending stories here -->
+                </ol>
+
+                <div class="newsletter">
+                    <h3>Stay Updated!</h3>
+                    <p>Subscribe to our newsletter for the latest news.</p>
+
+                    <form id="newsletterForm">
+                        <input type="email" id="emailInput"
+                               placeholder="Enter your email"
+                               aria-label="Email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+
+                    <p id="newsletterMessage" class="form-message"></p>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h2>DAILY<span>NEWS</span></h2>
+        <p>Your trusted destination for news and information.</p>
+        <p>&copy; <span id="year"></span> Daily News. All rights reserved.</p>
+    </footer>
+
+
+</body>
+</html>
